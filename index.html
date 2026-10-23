@@ -1,97 +1,81 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffc907">
-  <title>Water Drop Rush | Clean Water Challenge</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Drop Rush</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
+
 <body>
-  <header class="topbar">
-    <div class="brand">
-      <span class="brand-mark">💧</span>
-      <span>charity: water
-        <small>INSPIRED GAME PROTOTYPE</small>
-      </span>
-    </div>
-    <span class="top-label">THE CLEAN WATER CHALLENGE</span>
+
+  <header>
+    <h2>💧 charity: water</h2>
+    <p>Clean Water Game</p>
   </header>
 
-  <main class="container">
-    <section class="intro">
-      <p class="eyebrow">PLAY FOR A PURPOSE</p>
-      <h1>WATER <span>DROP RUSH.</span></h1>
-      <p>Every drop counts. Collect clean water, avoid pollution, and reach your goal before time runs out!</p>
+  <main>
+
+    <h1>Water Drop Rush 💧</h1>
+    <p>Collect clean water and help make a difference!</p>
+
+    <section class="game">
+
+      <h2>How To Play</h2>
+
+      <p>
+        Click the blue water drop to get 10 points.
+        Avoid the dirty water because you lose 10 points.
+        Get 100 points before the timer runs out!
+      </p>
+
+      <div class="scores">
+        <h3>Score: <span id="score">0</span></h3>
+        <h3>Time: <span id="time">30</span>s</h3>
+      </div>
+
+      <div class="progress">
+        <div id="progressBar"></div>
+      </div>
+
+      <div id="gameArea">
+        <button id="water" class="drop" type="button">💧</button>
+        <button id="dirty" class="drop" type="button">🟤</button>
+      </div>
+
+      <p id="message">Press Start to play!</p>
+
+      <button id="start" type="button">Start Game</button>
+      <button id="reset" type="button">Reset Game</button>
+
     </section>
 
-    <section class="game-shell" aria-label="Water Drop Rush game">
-      <div class="scoreboard">
-        <div>
-          <span class="stat-label">CLEAN WATER</span>
-          <strong><span id="score">0</span> <small>/ 100</small></strong>
-        </div>
-        <div>
-          <span class="stat-label">TIME LEFT</span>
-          <strong><span id="timer">30</span><small> SEC</small></strong>
-        </div>
-        <div>
-          <span class="stat-label">BEST SCORE</span>
-          <strong id="best">0</strong>
-        </div>
-      </div>
+    <section class="about">
 
-      <div class="progress-wrap" role="progressbar"
-        aria-label="Progress to clean water goal"
-        aria-valuemin="0" aria-valuemax="100"
-        aria-valuenow="0" id="progress">
-        <div id="progressFill"></div>
-      </div>
+      <h2>Why Clean Water Matters</h2>
 
-      <div class="game-field" id="field"
-        aria-label="Tap the blue drops to collect water">
-        <div class="field-grid"></div>
-        <div class="field-watermark">💧</div>
-        <div id="drops"></div>
+      <p>
+        Millions of people around the world need
+        access to clean water. This game was inspired
+        by charity: water and their mission to help
+        people get clean and safe drinking water.
+      </p>
 
-        <div class="overlay" id="overlay">
-          <div class="overlay-panel">
-            <span class="overlay-icon" id="overlayIcon">💧</span>
-            <h2 id="overlayTitle">READY TO MAKE A SPLASH?</h2>
-            <p id="overlayText">Collect blue drops (+10). Avoid brown polluted drops (-15). Reach 100 points in 30 seconds!</p>
-            <button class="primary-btn" id="startBtn" type="button">START GAME →</button>
-          </div>
-        </div>
+      <a href="https://www.charitywater.org/" target="_blank">
+        Learn More About charity: water
+      </a>
 
-        <div class="toast" id="toast" aria-live="polite"></div>
-        <div class="confetti" id="confetti" aria-hidden="true"></div>
-      </div>
-
-      <div class="controls">
-        <p>
-          <span class="legend-dot clean"></span> CLEAN +10
-          <span class="legend-dot dirty"></span> POLLUTED -15
-        </p>
-        <button id="resetBtn" class="secondary-btn" type="button">↻ RESET GAME</button>
-      </div>
     </section>
 
-    <section class="impact">
-      <div class="impact-icon">🌍</div>
-      <div>
-        <h2>WHY WATER MATTERS</h2>
-        <p>Access to clean water changes lives. This game is inspired by charity: water's mission to help bring clean and safe drinking water to people around the world. This is an independent educational prototype, not an official charity: water game.</p>
-        <a href="https://www.charitywater.org/" target="_blank" rel="noopener noreferrer">LEARN ABOUT THE MISSION ↗</a>
-      </div>
-    </section>
-
-    <footer>
-      MADE WITH HTML + CSS + JAVASCRIPT
-      <span>•</span> EVERY DROP COUNTS.
-    </footer>
   </main>
+
+  <footer>
+    <p>Water Drop Rush | Game Prototype</p>
+  </footer>
+
   <script src="script.js"></script>
+
 </body>
 </html>

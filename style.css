@@ -1,0 +1,140 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #eef8ff;
+  text-align: center;
+  color: #222;
+}
+
+header {
+  background-color: #ffc907;
+  padding: 15px;
+}
+
+header h2 {
+  margin-bottom: 5px;
+}
+
+h1 {
+  color: #0077b6;
+  margin-top: 30px;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 15px;
+}
+
+.game {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 25px;
+  border: 2px solid #0077b6;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-around;
+}
+
+.progress {
+  height: 15px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+#progressBar {
+  width: 0%;
+  height: 100%;
+  background-color: #0077b6;
+}
+
+#gameArea {
+  height: 280px;
+  background-color: #d9f3ff;
+  border: 2px solid #0077b6;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.drop {
+  position: absolute;
+  font-size: 45px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+button {
+  padding: 12px 20px;
+  margin: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffc907;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffdb4d;
+}
+
+#message {
+  font-weight: bold;
+  color: #0077b6;
+}
+
+.about {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.about p {
+  line-height: 1.6;
+}
+
+.about a {
+  color: #0077b6;
+}
+
+footer {
+  background-color: #ffc907;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+/* Make the game fit smaller screens */
+@media (max-width: 600px) {
+  main {
+    padding: 10px;
+  }
+
+  .game {
+    padding: 12px;
+  }
+
+  #gameArea {
+    height: 240px;
+  }
+
+  .drop {
+    font-size: 35px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .scores {
+    font-size: 14px;
+  }
+}
